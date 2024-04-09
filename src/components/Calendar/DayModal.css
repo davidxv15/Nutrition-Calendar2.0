@@ -1,3 +1,7 @@
 li {
     color: red;
 }
+
+.Modal {
+    border-radius: 5%;
+}
