@@ -17,11 +17,14 @@ const Calendar = () => {
   const renderDays = () => {
     const startDay = currentDate.clone().startOf("month").startOf("week");
     const endDay = currentDate.clone().endOf("month").endOf("week");
+    const today = moment(); // Get today's date for comparison
     const dayArray = [];
     let day = startDay.clone();
 
     while (day.isBefore(endDay, "day")) {
       const currentDay = day.clone();
+      const isToday = currentDay.isSame(today, "day"); //checks if day = today
+
       const dayKey = currentDay.format("YYYY-MM-DD");
 
       const totalCalories = entries[dayKey]
@@ -40,6 +43,8 @@ const Calendar = () => {
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
+            backgroundColor: isToday ? "#ffff99" : "transparent", // Highlight if it's today
+            color: isToday ? "red" : "black", // Optional: Change text color for today
           }}
         >
           <div>{currentDay.format("D")}</div>

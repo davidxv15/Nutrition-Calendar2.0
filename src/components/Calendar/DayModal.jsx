@@ -7,8 +7,9 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
   const [calories, setCalories] = useState("");
   console.log(entries[day]);
 
-  const totalCalories = entries[day] ? entries[day].reduce((total, entry) => total + entry.calories, 0) : 0;
-
+  const totalCalories = entries[day]
+    ? entries[day].reduce((total, entry) => total + entry.calories, 0)
+    : 0;
 
   const addEntry = () => {
     if (!foodName || calories <= 0) {
@@ -33,10 +34,12 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
     return dayEntries.map((entry, index) => (
       <li key={index}>
         {entry.foodName} - {entry.calories} Cal
-        <button onClick={() => deleteEntry(index)} style={{ marginLeft: '10px' }}>
-           <BsTrash3 />
+        <button
+          onClick={() => deleteEntry(index)}
+          style={{ marginLeft: "10px" }}
+        >
+          <BsTrash3 />
         </button>
-
       </li>
     ));
   };
