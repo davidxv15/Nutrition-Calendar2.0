@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
+import "./Calendar.css";
 import DayModal from "./DayModal";
 
 const Calendar = () => {
@@ -35,17 +36,7 @@ const Calendar = () => {
         <div
           key={dayKey}
           onClick={() => setSelectedDay(currentDay)}
-          style={{
-            margin: "10px",
-            padding: "20px",
-            border: "1px solid black",
-            cursor: "pointer",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            backgroundColor: isToday ? "#ffff99" : "transparent", // Highlight if it's today
-            color: isToday ? "red" : "black", // Optional: Change text color for today
-          }}
+          className={`day ${isToday ? 'day-today' : ''}`}
         >
           <div>{currentDay.format("D")}</div>
           <div>Total Cal: {totalCalories}</div>

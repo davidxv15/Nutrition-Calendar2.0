@@ -1,0 +1,22 @@
+.calendar-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 600px;
+  }
+  
+  .day {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .day-today {
+    background-color: #ffff99;
+    color: red;
+  }
+  

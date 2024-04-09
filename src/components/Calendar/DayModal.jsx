@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./DayModal.css";
 import { IoMdCloseCircle } from "react-icons/io";
 import { BsTrash3 } from "react-icons/bs";
 
@@ -47,16 +48,16 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
   return (
     <div
       className="Modal"
-      style={{
-        position: "fixed",
-        top: "40%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        borderRadius: "5%",
-        backgroundColor: "burlywood",
-        padding: "20px",
-        zIndex: 1000,
-      }}
+      // style={{
+      //   position: "fixed",
+      //   top: "40%",
+      //   left: "50%",
+      //   transform: "translate(-50%, -50%)",
+      //   // borderRadius: "5%",
+      //   backgroundColor: "burlywood",
+      //   padding: "20px",
+      //   zIndex: 1000,
+      // }}
     >
       <h3>{day}</h3>
       <div>
