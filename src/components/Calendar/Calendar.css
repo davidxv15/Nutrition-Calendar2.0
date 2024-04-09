@@ -1,22 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Rock+Salt&display=swap");
+
 .calendar-container {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 600px;
-  }
-  
-  .day {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid black;
-    border-radius: 5%;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .day-today {
-    background-color: #ffff99;
-    color: red;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+
+h2 {
+  font-family: "Rock Salt", sans-serif;
+}
+
+.calendar-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-family: "Rock Salt", sans-serif;
+}
+
+.day {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 5%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.day-today {
+  background-color: #ffff99;
+  color: red;
+}

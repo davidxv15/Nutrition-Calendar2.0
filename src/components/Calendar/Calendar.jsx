@@ -62,7 +62,18 @@ const Calendar = () => {
       >
         Next
       </button>
-      <div style={{ display: "flex", flexWrap: "wrap", maxWidth: "600px" }}>
+      <div className="calendar-header">
+      {/* Weekday labels, if you're adding them */}
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+
+      <div className="calendar-body">
         {renderDays()}
       </div>
       {selectedDay && (
