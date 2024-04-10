@@ -36,10 +36,13 @@ const Calendar = () => {
         <div
           key={dayKey}
           onClick={() => setSelectedDay(currentDay)}
-          className={`day ${isToday ? 'day-today' : ''}`}
+          className={`day ${isToday ? "day-today" : ""}`}
         >
           <div>{currentDay.format("D")}</div>
-          <div>Total Cal: {totalCalories}</div>
+          <div>
+            Total Cal: <br></br>
+            {totalCalories}
+          </div>
         </div>
       );
       day.add(1, "day");
@@ -48,34 +51,38 @@ const Calendar = () => {
   };
 
   return (
-    <div>
-      <h2>{currentDate.format("MMMM YYYY")}</h2>
-      <button
-        onClick={() =>
-          setCurrentDate((prev) => prev.clone().subtract(1, "month"))
-        }
-      >
-        Previous
-      </button>
-      <button
-        onClick={() => setCurrentDate((prev) => prev.clone().add(1, "month"))}
-      >
-        Next
-      </button>
-      <div className="calendar-header">
-      {/* Weekday labels, if you're adding them */}
-      <div>Sun</div>
-      <div>Mon</div>
-      <div>Tue</div>
-      <div>Wed</div>
-      <div>Thu</div>
-      <div>Fri</div>
-      <div>Sat</div>
-    </div>
+    <div className="calendar-background">
+      <div className="calendar-nav">
+        <button
+          className="month-button"
+          onClick={() =>
+            setCurrentDate((prev) => prev.clone().subtract(1, "month"))
+          }
+        >
+          Previous Month
+        </button>
 
-      <div className="calendar-body">
-        {renderDays()}
+        <div className="calendar-nav-title">
+          <h2>{currentDate.format("MMMM YYYY")}</h2>
+        </div>
+        <button
+          className="month-button"
+          onClick={() => setCurrentDate((prev) => prev.clone().add(1, "month"))}
+        >
+          Next Month
+        </button>
       </div>
+      <div className="calendar-header">
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div>Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </div>
+
+      <div className="calendar-body">{renderDays()}</div>
       {selectedDay && (
         <DayModal
           day={selectedDay.format("YYYY-MM-DD")}

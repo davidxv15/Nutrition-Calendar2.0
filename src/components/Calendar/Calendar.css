@@ -6,6 +6,30 @@
   max-width: 600px;
 }
 
+.calendar-background {
+  padding: 8px;
+  padding-top: -10px;
+  width: 95%;
+  height: auto;
+  border: 2px solid #1e0d0d;
+  border-radius: 2px;
+  background-image: url("knife.avif");
+  background-size: cover;
+}
+
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0.8;
+}
+
 .calendar-body {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -16,6 +40,7 @@
 
 h2 {
   font-family: "Rock Salt", sans-serif;
+  text-align: center;
 }
 
 .calendar-header {
@@ -27,16 +52,30 @@ h2 {
 
 .day {
   margin: 10px;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 5%;
+  padding: 10px;
+  font-size: 20px;
+  color: #333;
+  border: 1px solid #08d241;
+  background-color: rgb(178, 241, 219);
+  border-radius: 4px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
+  opacity: 0.8;
 }
 
 .day-today {
   background-color: #ffff99;
-  color: red;
+  /* color: red; */
+}
+
+.month-button {
+  display: flex;
+  font-size: 1em;
+  font-family: "Rock Salt", sans-serif;
+  background-color: rgb(178, 241, 219);
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 4px;
 }
