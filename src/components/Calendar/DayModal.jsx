@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./DayModal.css";
 import { IoMdCloseCircle } from "react-icons/io";
 import { BsTrash3 } from "react-icons/bs";
@@ -6,6 +6,8 @@ import { BsTrash3 } from "react-icons/bs";
 const DayModal = ({ day, entries, setEntries, closeModal }) => {
   const [foodName, setFoodName] = useState("");
   const [calories, setCalories] = useState("");
+  const foodNameInputRef = useRef(null); //Refs initialized
+  const caloriesInputRef = useRef(null);
   console.log(entries[day]);
 
   const totalCalories = entries[day]
@@ -20,14 +22,28 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
     const newEntry = { foodName, calories: parseInt(calories, 10) };
     const dayEntries = entries[day] ? [...entries[day], newEntry] : [newEntry];
     setEntries({ ...entries, [day]: dayEntries });
-    setFoodName(""); // Resets to empty
+    setFoodName(""); // empty string = resets to empty
     setCalories("");
   };
 
   const deleteEntry = (index) => {
     const updatedEntries = [...entries[day]];
-    updatedEntries.splice(index, 1); // Remove the entry at the specified index
+    updatedEntries.splice(index, 1); // Remove the entry at the SPECIFIED index
     setEntries({ ...entries, [day]: updatedEntries });
+  };
+
+  const handleKeyDownFoodName = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      caloriesInputRef.current.focus();
+    }
+  };
+
+  const handleKeyDownCalories = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      addEntry();
+    }
   };
 
   // This = 1 entry 'line'
@@ -37,7 +53,6 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
         <span>{entry.foodName} - {entry.calories} Cal</span>
         <button className="trash-button"
           onClick={() => deleteEntry(index)}
-          // style={{ marginLeft: "30px" }}
         >
           <BsTrash3 />
         </button>
@@ -65,30 +80,21 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
       <hr />
       <div>
         <input
+        ref={foodNameInputRef}
           type="text"
           placeholder="Food Name"
           value={foodName}
           onChange={(e) => setFoodName(e.target.value)}
           autoFocus
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              document.getElementById('caloriesInput').focus();
-            }
-          }}
+          onKeyDown={handleKeyDownFoodName}
         />
         <input
+          ref={caloriesInputRef}
           type="number"
           placeholder="Calories"
           value={calories}
           onChange={(e) => setCalories(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault(); // Prevent form submission
-              addEntry(); // Call the function to add the entry
-            }
-          }}
-        
+          onKeyDown={handleKeyDownCalories}
         />
         <button className="add-entry"onClick={addEntry}>Add Entry</button>
       </div>
