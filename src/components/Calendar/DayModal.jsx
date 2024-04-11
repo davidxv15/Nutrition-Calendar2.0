@@ -35,7 +35,7 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
     return dayEntries.map((entry, index) => (
       <li key={index}>
         {entry.foodName} - {entry.calories} Cal
-        <button
+        <button className="trash-button"
           onClick={() => deleteEntry(index)}
           style={{ marginLeft: "10px" }}
         >
@@ -48,26 +48,17 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
   return (
     <div
       className="Modal"
-      // style={{
-      //   position: "fixed",
-      //   top: "40%",
-      //   left: "50%",
-      //   transform: "translate(-50%, -50%)",
-      //   // borderRadius: "5%",
-      //   backgroundColor: "burlywood",
-      //   padding: "20px",
-      //   zIndex: 1000,
-      // }}
+      
     >
-      <h3>{day}</h3>
-      <div>
+      <h3><span className="Modal-date">{day}</span></h3>
+      <div className="Modal-entries">
         {entries[day] && entries[day].length > 0 ? (
-          <ul>{renderDayEntries(entries[day])}</ul>
+          <ul className="Modal-entries">{renderDayEntries(entries[day])}</ul>
         ) : (
           <p>No entries for this day.</p>
         )}
       </div>
-      <div>Total Calories: {totalCalories}</div>
+      <div><span className="underline">Total Calories:</span> {totalCalories}</div>
 
       <hr />
       <div>

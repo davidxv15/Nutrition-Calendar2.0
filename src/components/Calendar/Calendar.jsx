@@ -26,7 +26,7 @@ const Calendar = () => {
       const currentDay = day.clone();
       const isToday = currentDay.isSame(today, "day"); //checks if day = today
 
-      const dayKey = currentDay.format("YYYY-MM-DD");
+      const dayKey = currentDay.format("MMMM-D-YY");
 
       const totalCalories = entries[dayKey]
         ? entries[dayKey].reduce((acc, curr) => acc + curr.calories, 0)
@@ -40,8 +40,8 @@ const Calendar = () => {
         >
           <div>{currentDay.format("D")}</div>
           <div>
-            Total Cal: <br></br>
-            {totalCalories}
+            <span className="underline">Daily Total:</span> <br></br>
+            {totalCalories} Cal
           </div>
         </div>
       );
@@ -85,7 +85,7 @@ const Calendar = () => {
       <div className="calendar-body">{renderDays()}</div>
       {selectedDay && (
         <DayModal
-          day={selectedDay.format("YYYY-MM-DD")}
+          day={selectedDay.format("MMMM-D-YY")}
           entries={entries}
           setEntries={setEntries}
           closeModal={() => setSelectedDay(null)}

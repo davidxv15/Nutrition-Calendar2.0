@@ -3,13 +3,17 @@
 .calendar-container {
   display: flex;
   flex-wrap: wrap;
+  width: auto;
   max-width: 600px;
 }
 
 .calendar-background {
-  padding: 8px;
-  padding-top: -10px;
-  width: 95%;
+  padding: 12px;
+  margin-top: -40px;
+  padding-top: -20px;
+  /* transform: translateY(-40px); */
+  width: auto;
+  min-width: 60%;
   height: auto;
   border: 2px solid #1e0d0d;
   border-radius: 2px;
@@ -23,6 +27,7 @@
   align-items: center;
   width: 80%;
   padding: 10px;
+  margin: 0 auto;
   border: 1px solid black;
   border-radius: 5px;
   background-color: #f0f0f0;
@@ -53,7 +58,9 @@ h2 {
 .day {
   margin: 10px;
   padding: 10px;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: "Coming Soon", sans-serif;
+  font-weight: 800;
   color: #333;
   border: 1px solid #08d241;
   background-color: rgb(178, 241, 219);
@@ -78,4 +85,9 @@ h2 {
   margin: auto;
   border: 1px solid black;
   border-radius: 4px;
+}
+
+.underline {
+    text-decoration: underline;
+    color: red;
 }
