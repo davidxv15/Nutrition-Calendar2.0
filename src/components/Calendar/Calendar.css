@@ -5,22 +5,25 @@
   flex-wrap: wrap;
   width: auto;
   max-width: 600px;
+  padding: 8px;
+  margin: auto;
 }
 
 .calendar-background {
   padding: 12px;
   margin-top: -40px;
-  padding-top: -20px;
+  /* margin: -40px 10px; */
+  /* padding-bottom: 120px; */
   /* transform: translateY(-40px); */
   width: auto;
   /* min-width: 60%; */
-  height: 800px;
+  height: auto;
   border: 2px solid #1e0d0d;
   border-radius: 2px;
   background-image: url("knife.avif");
-  background-size: cover; /* Make sure the whole image is visible */
-  background-repeat: no-repeat; /* Prevent tiling of the background image */
-  background-position: center center; /* Center the background image */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center center;
 }
 
 .calendar-nav {

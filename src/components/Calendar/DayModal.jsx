@@ -69,13 +69,26 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
           placeholder="Food Name"
           value={foodName}
           onChange={(e) => setFoodName(e.target.value)}
-          autofocus
+          autoFocus
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              document.getElementById('caloriesInput').focus();
+            }
+          }}
         />
         <input
           type="number"
           placeholder="Calories"
           value={calories}
           onChange={(e) => setCalories(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault(); // Prevent form submission
+              addEntry(); // Call the function to add the entry
+            }
+          }}
+        
         />
         <button className="add-entry"onClick={addEntry}>Add Entry</button>
       </div>
