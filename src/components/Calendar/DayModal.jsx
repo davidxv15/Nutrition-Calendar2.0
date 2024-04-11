@@ -30,18 +30,20 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
     setEntries({ ...entries, [day]: updatedEntries });
   };
 
-  // This equals one entry
+  // This = 1 entry 'line'
   const renderDayEntries = (dayEntries) => {
     return dayEntries.map((entry, index) => (
-      <li key={index}>
-        {entry.foodName} - {entry.calories} Cal
+      <li key={index} className="modal-entry">
+        <span>{entry.foodName} - {entry.calories} Cal</span>
         <button className="trash-button"
           onClick={() => deleteEntry(index)}
-          style={{ marginLeft: "10px" }}
+          // style={{ marginLeft: "30px" }}
         >
           <BsTrash3 />
         </button>
+        
       </li>
+      
     ));
   };
 
@@ -53,7 +55,7 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
       <h3><span className="Modal-date">{day}</span></h3>
       <div className="Modal-entries">
         {entries[day] && entries[day].length > 0 ? (
-          <ul className="Modal-entries">{renderDayEntries(entries[day])}</ul>
+          <ul>{renderDayEntries(entries[day])}</ul>
         ) : (
           <p>No entries for this day.</p>
         )}
@@ -67,6 +69,7 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
           placeholder="Food Name"
           value={foodName}
           onChange={(e) => setFoodName(e.target.value)}
+          autofocus
         />
         <input
           type="number"
@@ -74,10 +77,10 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
           value={calories}
           onChange={(e) => setCalories(e.target.value)}
         />
-        <button onClick={addEntry}>Add Entry</button>
+        <button className="add-entry"onClick={addEntry}>Add Entry</button>
       </div>
-      <button onClick={closeModal} style={{ marginTop: "10px" }}>
-        Close
+      <button className="close-window" onClick={closeModal} style={{ marginTop: "10px" }}>
+      <IoMdCloseCircle />
       </button>
     </div>
   );

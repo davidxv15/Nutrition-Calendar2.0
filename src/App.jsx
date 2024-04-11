@@ -6,8 +6,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>
-          Nutrition <span className="cursive">Calendar2.0</span>
+        <h1 className="app-title">
+          Nutrition <span className="cursive">Calendar</span>
         </h1>
         <Calendar />
       </header>

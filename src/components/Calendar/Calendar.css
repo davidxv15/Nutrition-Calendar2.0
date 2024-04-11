@@ -13,12 +13,14 @@
   padding-top: -20px;
   /* transform: translateY(-40px); */
   width: auto;
-  min-width: 60%;
-  height: auto;
+  /* min-width: 60%; */
+  height: 800px;
   border: 2px solid #1e0d0d;
   border-radius: 2px;
   background-image: url("knife.avif");
-  background-size: cover;
+  background-size: cover; /* Make sure the whole image is visible */
+  background-repeat: no-repeat; /* Prevent tiling of the background image */
+  background-position: center center; /* Center the background image */
 }
 
 .calendar-nav {
@@ -62,7 +64,7 @@ h2 {
   font-family: "Coming Soon", sans-serif;
   font-weight: 800;
   color: #333;
-  border: 1px solid #08d241;
+  border: 2px solid #08d241;
   background-color: rgb(178, 241, 219);
   border-radius: 4px;
   cursor: pointer;
@@ -73,13 +75,13 @@ h2 {
 }
 
 .day-today {
-  background-color: #ffff99;
+  background-color: #1ad2c3;
   /* color: red; */
 }
 
 .month-button {
   display: flex;
-  font-size: 1em;
+  font-size: 0.6em;
   font-family: "Rock Salt", sans-serif;
   background-color: rgb(178, 241, 219);
   margin: auto;
@@ -89,5 +91,28 @@ h2 {
 
 .underline {
     text-decoration: underline;
-    color: red;
+    color: rgb(165, 12, 165);
 }
+
+@media (max-width: 480px) {
+    .calendar-container, .calendar-background, .calendar-nav {
+      width: auto; /* Ensure these elements don't exceed the viewport width */
+      margin: 0 auto; /* Center them */
+    }
+    .calendar-nav {
+      flex-direction: column; /* Stack the Previous button, title, and Next button vertically */
+      align-items: center; /* Align items to the center */
+    }
+    .calendar-header div, .day {
+      font-size: 12px; /* Smaller text to fit more content */
+    }
+    .day {
+      padding: 8px; /* Reduce padding to fit the days better */
+    }
+    /* Reduce the size of the buttons in the navigation to fit the screen better */
+    .month-button {
+      padding: 5px;
+      font-size: 12px;
+    }
+  }
+  

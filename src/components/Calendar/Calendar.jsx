@@ -59,7 +59,7 @@ const Calendar = () => {
             setCurrentDate((prev) => prev.clone().subtract(1, "month"))
           }
         >
-          Previous Month
+          Prev. Month
         </button>
 
         <div className="calendar-nav-title">
