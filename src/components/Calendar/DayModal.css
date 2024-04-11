@@ -16,6 +16,8 @@
   padding: -20px;
   z-index: 1000;
   opacity: 0.9;
+  transition: opacity 0.5s ease; /* Add transition property for opacity */
+  animation: fadeIn 0.7s ease; /* Add fade-in animation */
 }
 
 .Modal-date {
@@ -92,3 +94,13 @@ input, .add-entry {
       max-width: none; 
     }
   }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.9;
+    }
+  }
+  
