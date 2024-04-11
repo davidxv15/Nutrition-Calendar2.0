@@ -3,25 +3,31 @@
 .Modal {
   position: fixed;
   font-family: "Coming Soon", sans-serif;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 800;
   top: 50%;
   left: 50%;
   height: auto;
+  width: 50%;
   transform: translate(-50%, -50%);
   border: 1px solid #000000;
   border-radius: 10px;
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  padding: -20px;
   z-index: 1000;
   opacity: 0.9;
 }
 
 .Modal-date {
     font-family: "Caveat", sans-serif;
-    font-size: 44px;
+    font-size: 40px;
   font-weight: 800;
+  margin-top: -40px;
   transform: translateY(40px);
+}
+
+.no-entries {
+    transform: translateY(12px);
 }
 
 .modal-input {
@@ -36,13 +42,15 @@
     display:flex;
     justify-content: space-between;
     align-items: left; 
-    width: 100%;
+    width: 90%;
     background-color:rgb(127, 170, 255);
+    border-radius: 2px;
     /* line-height: 9px; */
-    margin-top: 2px;
+    margin-top: 1px;
 }
 
 .Modal-entries ul {
+    font-size: 16px;
     list-style-type: disc;
     padding-left: 30px;
   }
@@ -78,7 +86,7 @@ input, .add-entry {
 @media (max-width: 480px) {
     .Modal {
       width: 80%;
-      left: 5%;
+      left: 10%;
       transform: translateX(0%);
       top: 10%;
       max-width: none; 

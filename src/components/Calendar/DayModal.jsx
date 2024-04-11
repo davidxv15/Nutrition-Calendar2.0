@@ -52,12 +52,12 @@ const DayModal = ({ day, entries, setEntries, closeModal }) => {
       className="Modal"
       
     >
-      <h3><span className="Modal-date">{day}</span></h3>
+      <h3  className="Modal-date">{day}</h3>
       <div className="Modal-entries">
         {entries[day] && entries[day].length > 0 ? (
           <ul>{renderDayEntries(entries[day])}</ul>
         ) : (
-          <p>No entries for this day.</p>
+          <p className="no-entries">No entries for this day.</p>
         )}
       </div>
       <div><span className="underline">Total Calories:</span> {totalCalories}</div>
