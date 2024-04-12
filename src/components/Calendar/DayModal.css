@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Coming+Soon&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Rock+Salt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Coming+Soon&family=Edu+NSW+ACT+Foundation:wght@400..700&family=Rock+Salt&display=swap");
 
 .Modal {
   position: fixed;
@@ -16,20 +16,20 @@
   padding: -20px;
   z-index: 1000;
   opacity: 0.9;
-  transition: opacity 0.5s ease; /* Add transition property for opacity */
-  animation: fadeIn 0.7s ease; /* Add fade-in animation */
+  transition: opacity 0.5s ease;
+  animation: fadeIn 0.7s ease;
 }
 
 .Modal-date {
-    font-family: "Caveat", sans-serif;
-    font-size: 40px;
+  font-family: "Caveat", sans-serif;
+  font-size: 40px;
   font-weight: 800;
   margin-top: -40px;
   transform: translateY(40px);
 }
 
 .no-entries {
-    transform: translateY(12px);
+  transform: translateY(12px);
 }
 
 .modal-input {
@@ -41,66 +41,65 @@
 }
 
 .modal-entry {
-    display:flex;
-    justify-content: space-between;
-    align-items: left; 
-    width: 90%;
-    background-color:rgb(127, 170, 255);
-    border-radius: 2px;
-    /* line-height: 9px; */
-    margin-top: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  width: 90%;
+  background-color: rgb(127, 170, 255);
+  border-radius: 2px;
+  margin-top: 1px;
 }
 
 .Modal-entries ul {
-    font-size: 16px;
-    list-style-type: disc;
-    padding-left: 30px;
-  }
-
-.trash-button {
-    cursor: pointer;
-    font-size: 22px;
-    background-color: transparent;
-    border: none;
-    right: 1em;
-    margin-left: 90px;
+  font-size: 16px;
+  list-style-type: disc;
+  padding-left: 30px;
 }
 
-input, .add-entry {
-    font-family: "Coming Soon", sans-serif;
-    border-radius: 8px;
-    border-color: gray;
+.trash-button {
+  cursor: pointer;
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  right: 1em;
+  margin-left: 90px;
+}
+
+input,
+.add-entry {
+  font-family: "Coming Soon", sans-serif;
+  border-radius: 8px;
+  border-color: gray;
 }
 
 .add-entry {
-    cursor: pointer;
-    font-weight: 600;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .close-window {
-    cursor: pointer;
-    font-size: 33px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: none;
+  cursor: pointer;
+  font-size: 33px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
 }
 
 @media (max-width: 480px) {
-    .Modal {
-      width: 80%;
-      left: 10%;
-      transform: translateX(0%);
-      top: 10%;
-      max-width: none; 
-    }
+  .Modal {
+    width: 80%;
+    left: 10%;
+    transform: translateX(0%);
+    top: 10%;
+    max-width: none;
   }
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 0.9;
-    }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
+  to {
+    opacity: 0.9;
+  }
+}
