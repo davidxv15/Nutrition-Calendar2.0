@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Nutrition-Calendar2.0/static/css/main.efe7e25d.css",
+    "main.js": "/Nutrition-Calendar2.0/static/js/main.5dec1980.js",
+    "static/js/453.179b8bc5.chunk.js": "/Nutrition-Calendar2.0/static/js/453.179b8bc5.chunk.js",
+    "static/media/knife.avif": "/Nutrition-Calendar2.0/static/media/knife.22addb99369f7beb716b.avif",
+    "index.html": "/Nutrition-Calendar2.0/index.html",
+    "main.efe7e25d.css.map": "/Nutrition-Calendar2.0/static/css/main.efe7e25d.css.map",
+    "main.5dec1980.js.map": "/Nutrition-Calendar2.0/static/js/main.5dec1980.js.map",
+    "453.179b8bc5.chunk.js.map": "/Nutrition-Calendar2.0/static/js/453.179b8bc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.efe7e25d.css",
+    "static/js/main.5dec1980.js"
+  ]
+}
