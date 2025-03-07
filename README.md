@@ -45,6 +45,7 @@
 * **Custom Meal Categories**: Organize entries beyond calories (e.g., **breakfast, lunch, dinner, snacks**).  
 * **Database Integration**: Shift from localStorage to **MongoDB** for multi-device access and analytics.  
 * **User Insights & Trends**: Graph historical data for better decision-making.  
+* **Themes**: Change theme to fit your personality.
 
 ### Use Case:  
 
