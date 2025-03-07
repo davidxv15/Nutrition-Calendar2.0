@@ -50,9 +50,8 @@
 
 The **Nutrition Calendar** is designed for **everyone**—from athletes to casual users—who want to **track food intake and learn proper nutrition**.  
 
-As a **former high-end chef** with extensive experience working alongside **nutritionists, dietitians, and medical professionals**, I designed this app to **help users develop food awareness, build healthier habits, and recognize patterns between diet and well-being**.  
+As a **former chef** with extensive experience working alongside **nutritionists, dietitians, and medical professionals**, I designed this app to **help users develop food awareness, build healthier habits, and recognize patterns between diet and well-being**.  
 
-Whether you’re meal-prepping, monitoring caloric intake, or simply **learning about better nutrition**, this app provides an **easy-to-use** and **data-driven** approach to improving dietary choices.  
 
 ### How to Run Locally:  
 
