@@ -16,7 +16,7 @@ h1 {
 }
 
 .App-header {
-  background-color: #ffffff;
+  background-color: #924141;
   min-height: 100vh;
   display: flex;
   width: auto;
@@ -34,5 +34,6 @@ h1 {
 @media (max-width: 480px) {
   .app-title {
     transform: translateX(70px);
+    background-color: #61dafb;
   };
 }
