@@ -16,7 +16,7 @@
   min-width: 60%;
   height: auto;
   border: 2px solid #1e0d0d;
-  border-radius: 2px;
+  border-radius: 8px;
   background-image: url("knife.avif");
   background-size: cover; 
   background-repeat: no-repeat; 
