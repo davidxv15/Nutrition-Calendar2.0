@@ -54,6 +54,10 @@ The **Nutrition Calendar** is designed for **everyone**—from athletes to casua
 As a **former chef** with extensive experience working alongside **nutritionists, dietitians, and medical professionals**, I designed this app to **help users develop food awareness, build healthier habits, and recognize patterns between diet and well-being**.  
 
 
+![Image](https://github.com/user-attachments/assets/84ad3172-04f5-4d6c-9571-7db03b81f690)
+
+![Image](https://github.com/user-attachments/assets/fca20167-296e-4439-9dce-544f5c8ef363)
+
 ### How to Run Locally:  
 
 1. **Clone the repository:**  
