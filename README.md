@@ -1,4 +1,4 @@
-# Nutrition Calendar: Track Your Daily Food Intake
+# Nutrition Calendar: Track Your Daily Food Intake  [![Netlify Status](https://api.netlify.com/api/v1/badges/332ff891-7a53-402c-ad3e-f522ba3e3be7/deploy-status)](https://app.netlify.com/sites/nutrition-calendar/deploys)
 
 ## How to Use the App?
 
