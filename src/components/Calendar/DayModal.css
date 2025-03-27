@@ -105,3 +105,41 @@ input,
     opacity: 0.9;
   }
 }
+
+
+@media (max-width: 768px) {
+  .Modal {
+    width: 70%;
+    font-size: 18px;
+    top: 25%;
+  }
+
+  .Modal-date {
+    font-size: 32px;
+  }
+
+  .trash-button {
+    font-size: 18px;
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Modal {
+    width: 90%;
+    left: 5%;
+    top: 10%;
+    transform: none;
+    font-size: 16px;
+  }
+
+  .Modal-date {
+    font-size: 26px;
+    transform: none;
+  }
+
+  .trash-button {
+    font-size: 16px;
+    margin-left: 30px;
+  }
+}
