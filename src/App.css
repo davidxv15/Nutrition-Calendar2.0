@@ -37,3 +37,30 @@ h1 {
     background-color: transparent;
   };
 }
+
+@media (max-width: 768px) {
+  .App-header {
+    padding: 10px;
+    font-size: calc(10px + 1.5vmin);
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.2rem;
+    text-decoration-thickness: 0.5px;
+  }
+
+  .app-title {
+    transform: translateX(30px); /* subtle shift instead of 70px */
+  }
+
+  .App-header {
+    padding: 5px;
+    font-size: calc(10px + 1vmin);
+  }
+}
