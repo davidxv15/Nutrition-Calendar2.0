@@ -28,12 +28,12 @@ h1 {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #2f5e6c;
 }
 
 @media (max-width: 480px) {
   .app-title {
     transform: translateX(70px);
-    background-color: #61dafb;
+    background-color: transparent;
   };
 }
