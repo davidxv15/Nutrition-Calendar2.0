@@ -12,15 +12,15 @@
 .calendar-background {
   padding: 12px;
   margin-top: -40px;
-  width: auto;
-  min-width: 60%;
+  width: 100%;
+  min-width: 90%;
   height: auto;
   border: 2px solid #1e0d0d;
   border-radius: 8px;
   background-image: url("knife.avif");
   background-size: cover; 
   background-repeat: no-repeat; 
-  background-position: center center;
+  background-position: center;
 }
 
 .calendar-nav {
