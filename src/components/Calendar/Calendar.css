@@ -12,7 +12,7 @@
 .calendar-background {
   padding: 12px;
   margin-top: -40px;
-  width: 100%;
+  width: auto;
   min-width: 90%;
   height: auto;
   border: 2px solid #1e0d0d;
